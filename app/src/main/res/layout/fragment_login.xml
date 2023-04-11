@@ -1,6 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blury_background" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/crimson_pro"
+            android:text="@string/kleine"
+            android:textColor="@color/g_black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_kleine_shape"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLetsLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/crimson_pro"
+            android:gravity="center"
+            android:text="@string/let_s_login"
+            android:textAlignment="center"
+            android:textColor="@color/g_black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
+
+        <TextView
+            android:id="@+id/tvDontHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/crimson_pro"
+            android:gravity="center"
+            android:text="@string/tv_register"
+            android:textAlignment="center"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvLetsLogin" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
+
+        <EditText
+            android:id="@+id/edEmailLogin"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/white_background"
+            android:ems="10"
+            android:fontFamily="@font/crimson_pro"
+            android:gravity="center"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvDontHaveAccount" />
+
+        <EditText
+            android:id="@+id/edPasswordLogin"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/white_background"
+            android:ems="10"
+            android:fontFamily="@font/crimson_pro"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/edEmailLogin" />
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_pro"
+            android:gravity="center"
+            android:textColor="@color/g_black"
+            android:text="@string/forgot_password"
+            android:textAlignment="center"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/edPasswordLogin" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLoginLogin"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/blue_background"
+            android:fontFamily="@font/crimson_pro"
+            android:text="@string/button_login"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageViewFacebookLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLoginLogin"
+            app:srcCompat="@drawable/facebook_login" />
+
+        <TextView
+            android:id="@+id/textViewFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/facebook"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewFacebookLogin"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewFacebookLogin"
+            app:layout_constraintStart_toStartOf="@+id/imageViewFacebookLogin"
+            app:layout_constraintTop_toTopOf="@+id/imageViewFacebookLogin" />
+
+        <ImageView
+            android:id="@+id/imageViewGoogleLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLoginLogin"
+            app:srcCompat="@drawable/google_login" />
+
+        <TextView
+            android:id="@+id/textViewGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/google"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewGoogleLogin"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewGoogleLogin"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGoogleLogin"
+            app:layout_constraintTop_toTopOf="@+id/imageViewGoogleLogin" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
