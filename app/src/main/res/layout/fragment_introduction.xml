@@ -29,13 +29,16 @@
 
     <TextView
         android:id="@+id/tvRightAddressForShopping"
-        style="@style/h4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:fontFamily="@font/crimson_pro"
         android:gravity="center"
         android:text="@string/right_address"
         android:textAlignment="center"
+        android:textColor="@color/g_black"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/ellipse"
         app:layout_constraintEnd_toEndOf="@id/ellipse"
         app:layout_constraintStart_toStartOf="@id/ellipse"
@@ -43,13 +46,14 @@
 
     <TextView
         android:id="@+id/textView"
-        style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/crimson_pro"
         android:gravity="center"
         android:text="@string/quality"
         android:textAlignment="center"
+        android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="@+id/tvRightAddressForShopping"
         app:layout_constraintStart_toStartOf="@+id/tvRightAddressForShopping"
         app:layout_constraintTop_toBottomOf="@+id/tvRightAddressForShopping" />
@@ -62,12 +66,14 @@
         app:layout_constraintTop_toBottomOf="@id/guidelineLeftTexture" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_start"
         android:layout_width="130dp"
         android:layout_height="55dp"
         android:background="@drawable/blue_background"
-        android:text="Start"
+        android:fontFamily="@font/crimson_pro"
+        android:text="@string/start"
         android:textColor="@color/white"
-        android:textSize="17sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEllipseRight"
         app:layout_constraintStart_toStartOf="@+id/guidelineEllipseLeft"
