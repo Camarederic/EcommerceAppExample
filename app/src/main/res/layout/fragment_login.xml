@@ -114,14 +114,14 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/crimson_pro"
             android:gravity="center"
-            android:textColor="@color/g_black"
             android:text="@string/forgot_password"
             android:textAlignment="center"
+            android:textColor="@color/g_black"
             android:textSize="21sp"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@+id/edPasswordLogin" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
             android:layout_width="0dp"
             android:layout_height="55dp"
@@ -135,7 +135,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:spinning_bar_color="@color/white" />
 
         <ImageView
             android:id="@+id/imageViewFacebookLogin"
