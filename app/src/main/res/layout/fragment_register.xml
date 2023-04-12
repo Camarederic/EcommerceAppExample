@@ -8,8 +8,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/blury_background"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/blury_background" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -61,19 +61,19 @@
             app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
             app:layout_constraintTop_toBottomOf="@+id/tvLetsRegister" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineRegisterLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.09" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineRegisterRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.91" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
 
         <EditText
             android:id="@+id/edFirstName"
@@ -85,7 +85,7 @@
             android:fontFamily="@font/crimson_pro"
             android:gravity="center"
             android:hint="@string/first_name"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:singleLine="true"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -103,7 +103,7 @@
             android:fontFamily="@font/crimson_pro"
             android:gravity="center"
             android:hint="@string/last_name"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             android:singleLine="true"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -147,22 +147,22 @@
             app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
             app:layout_constraintTop_toBottomOf="@+id/edRegisterEmail" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonRegisterRegister"
             android:layout_width="0dp"
             android:layout_height="55dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/blue_background"
             android:fontFamily="@font/crimson_pro"
-            android:text="Register"
+            android:text="@string/register_button"
+            android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toStartOf="@+id/guidelineRegisterRight"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
             app:layout_constraintTop_toBottomOf="@+id/edRegisterPassword"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:spinning_bar_color="@color/white" />
 
         <ImageView
             android:id="@+id/imageViewFacebookLogin"
