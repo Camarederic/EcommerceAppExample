@@ -21,4 +21,8 @@
     <string name="password_register">Password</string>
     <string name="let_s_register">Let\'s Register</string>
     <string name="register_button">Register</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="text_view_reset_password">We will send you the password reset link to your email</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
 </resources>
