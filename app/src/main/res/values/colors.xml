@@ -24,7 +24,8 @@
     <color name="g_orange">#F8BA00</color>
     <color name="g_gray700">#676767</color>
     <color name="g_blue_gray200">#6D879C</color>
-    <color name="g_gray200">#EAEAEA</color>
+    <color name="g_gray200">#FAFBFC</color>
+    <color name="color_search_now">#919394</color>
 
 
 </resources>
