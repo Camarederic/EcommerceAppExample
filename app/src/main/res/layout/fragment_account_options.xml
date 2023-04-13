@@ -70,14 +70,14 @@
             android:background="@drawable/blue_background"
             android:fontFamily="@font/crimson_pro"
             android:text="@string/register"
+            android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonLoginAccountOptions"
@@ -87,13 +87,13 @@
             android:background="@drawable/white_background"
             android:fontFamily="@font/crimson_pro"
             android:text="@string/login"
+            android:textAllCaps="false"
             android:textColor="@color/g_black"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/buttonRegisterAccountOptions"
             app:layout_constraintStart_toStartOf="@+id/buttonRegisterAccountOptions"
-            app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -72,13 +72,14 @@
         android:background="@drawable/blue_background"
         android:fontFamily="@font/crimson_pro"
         android:text="@string/start"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEllipseRight"
         app:layout_constraintStart_toStartOf="@+id/guidelineEllipseLeft"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLeftTexture"
