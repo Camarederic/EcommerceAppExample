@@ -9,7 +9,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.ecommerceappexample.R
 import com.example.ecommerceappexample.databinding.ActivityShoppingBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityShoppingBinding

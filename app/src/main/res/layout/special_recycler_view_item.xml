@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/image_ad"
+            android:id="@+id/imageSpecialProduct"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginStart="16dp"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_ad_name"
+            android:id="@+id/tvSpecialProductsName"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -33,25 +33,28 @@
             android:textColor="@color/g_black"
             android:textSize="21sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/image_ad"
-            app:layout_constraintTop_toTopOf="@+id/image_ad" />
+            android:maxLines="2"
+            app:layout_constraintStart_toEndOf="@+id/imageSpecialProduct"
+            app:layout_constraintTop_toTopOf="@+id/imageSpecialProduct" />
 
         <TextView
-            android:id="@+id/tv_price"
+            android:id="@+id/tvSpecialProductsPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/crimson_pro"
             android:text="@string/_1600"
             android:textColor="@color/g_black"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_ad_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_ad_name" />
+            app:layout_constraintStart_toStartOf="@+id/tvSpecialProductsName"
+            app:layout_constraintTop_toBottomOf="@+id/tvSpecialProductsName" />
 
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonAddToCart"
             android:layout_width="82dp"
             android:layout_height="27dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/button_small_background"
             android:fontFamily="@font/crimson_pro"
             android:text="@string/add_to_cart"
@@ -60,7 +63,7 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/tvSpecialProductsPrice"
             app:spinning_bar_color="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -68,6 +71,8 @@
             android:id="@+id/imageButton"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/favorite_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
