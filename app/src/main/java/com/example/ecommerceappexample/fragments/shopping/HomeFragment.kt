@@ -28,7 +28,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         val categoriesFragments = arrayListOf(
-            MainCategoryFragment(),
+            SpecialProductsFragment(),
             ChairFragment(),
             CupboardFragment(),
             TableFragment(),
@@ -36,12 +36,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             FurnitureFragment()
         )
 
+        // Это чтобы не переключаться из одной категории в другую
+        binding.viewPagerHome.isUserInputEnabled = false
+
         val viewPager2Adapter =
             HomeViewPagerAdapter(categoriesFragments, childFragmentManager, lifecycle)
         binding.viewPagerHome.adapter = viewPager2Adapter
         TabLayoutMediator(binding.tabLayout, binding.viewPagerHome) { tab, position ->
             when (position) {
-                0 -> tab.text = "Main"
+                0 -> tab.text = "Special Products"
                 1 -> tab.text = "Chair"
                 2 -> tab.text = "Cupboard"
                 3 -> tab.text = "Table"
