@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="5dp"
+    android:background="@color/g_card_background"
     app:cardElevation="0dp"
     app:cardUseCompatPadding="true">
 
 
         <ImageView
-            android:id="@+id/image_ad"
+            android:id="@+id/imageBestDeals"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
@@ -21,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvSpecialProductsName"
+        android:id="@+id/tvBestDealsName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -31,37 +32,40 @@
         android:textColor="@color/g_black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_ad"
-        app:layout_constraintTop_toTopOf="@+id/image_ad" />
+        app:layout_constraintStart_toEndOf="@+id/imageBestDeals"
+        app:layout_constraintTop_toTopOf="@+id/imageBestDeals" />
 
     <TextView
-        android:id="@+id/tv_price"
+        android:id="@+id/tvOldPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/crimson_pro"
         android:text="@string/_1600"
         android:textColor="@color/g_black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/image_ad"
-        app:layout_constraintStart_toStartOf="@+id/tvSpecialProductsName"
-        app:layout_constraintTop_toBottomOf="@+id/tvSpecialProductsName"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBestDeals"
+        app:layout_constraintStart_toStartOf="@+id/tvBestDealsName"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestDealsName"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tv_new_price"
+        android:id="@+id/tvNewPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
         android:fontFamily="@font/crimson_pro"
         android:text="@string/_2000"
         android:textColor="@color/g_black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvSpecialProductsName"
-        app:layout_constraintTop_toBottomOf="@+id/tvSpecialProductsName" />
+        app:layout_constraintEnd_toEndOf="@+id/tvBestDealsName"
+        app:layout_constraintStart_toEndOf="@+id/tvOldPrice"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestDealsName" />
 
     <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/buttonAddToCart"
         android:layout_width="82dp"
         android:layout_height="27dp"
+        android:layout_marginStart="60dp"
         android:background="@drawable/button_small_background"
         android:fontFamily="@font/crimson_pro"
         android:text="@string/see_product"
@@ -69,9 +73,9 @@
         android:textColor="@color/white"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSpecialProductsName"
+        app:layout_constraintStart_toEndOf="@+id/tvBestDealsName"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506"
         app:spinning_bar_color="@color/white"
         tools:ignore="TouchTargetSizeCheck" />
 

@@ -2,7 +2,7 @@ package com.example.ecommerceappexample.data
 
 data class Product(
 
-    val id: String,
+    var id: String,
     val name: String,
     val category: String,
     val price: Float,
